@@ -70,7 +70,7 @@ if __name__ == "__main__":
     # Send Login Packet
     login_kwargs = {
         "vender_id": "QUECTEL",
-        "device_name": "AISTRACKER",
+        "vehicle_reg_no": "car123456",
         "imei": modem.getDevImei(),
         "firmware_version": modem.getDevFwVersion(),
         "protocal_version": "AIS140",
@@ -96,8 +96,8 @@ if __name__ == "__main__":
         "digital_io_status": "0001",
         "analog_io_status": 12.6
     }
-    res = ais_client.send_heart_beat(**hbt_kwargs)
-    logger.debug("ais_client.send_heart_beat() %s" % res)
+    res = ais_client.send_health_monitoring(**hbt_kwargs)
+    logger.debug("ais_client.send_health_monitoring() %s" % res)
     time.sleep(1)
 
     # Send Location/Alert Information Packet
@@ -162,7 +162,7 @@ if __name__ == "__main__":
         "distance": 12345,
         "provider": "G",
         "vehicle_reg_no": "CAR12345",
-        "reply_number": ""
+        "reply_number": "NA"
     }
     res = ais_client.send_emergency(**meg_kwargs)
     logger.debug("ais_client.send_emergency() %s" % res)

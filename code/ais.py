@@ -434,11 +434,11 @@ class AISClient(TCPUDPBase):
         msg = msg.encode()
         return msg
 
-    def send_login(self, vender_id, device_name, imei, firmware_version, protocal_version, latitude,
+    def send_login(self, vender_id, vehicle_reg_no, imei, firmware_version, protocal_version, latitude,
                    latitude_dir, longitude, longtiude_dir):
         kwgs = {
             "vender_id": vender_id,
-            "device_name": device_name,
+            "vehicle_reg_no": vehicle_reg_no,
             "imei": imei,
             "firmware_version": firmware_version,
             "protocal_version": protocal_version,
@@ -447,14 +447,14 @@ class AISClient(TCPUDPBase):
             "longitude": longitude,
             "longtiude_dir": longtiude_dir
         }
-        msg = "$,LGN,{vender_id},{device_name},{imei},{firmware_version},{protocal_version}," \
+        msg = "$,LGN,{vender_id},{vehicle_reg_no},{imei},{firmware_version},{protocal_version}," \
               "{latitude},{latitude_dir},{longitude},{longtiude_dir}*".format(**kwgs)
         return self.__send_msg(msg)
 
-    def send_heart_beat(self, vender_id, firmware_version, imei, battery_percentage,
-                        Low_battery_threshold_value, memory_percentage,
-                        data_update_rate_when_ignition_on, data_update_rate_when_ignition_off,
-                        digital_io_status, analog_io_status):
+    def send_health_monitoring(self, vender_id, firmware_version, imei, battery_percentage,
+                               Low_battery_threshold_value, memory_percentage,
+                               data_update_rate_when_ignition_on, data_update_rate_when_ignition_off,
+                               digital_io_status, analog_io_status):
         kwgs = {
             "vender_id": vender_id,
             "firmware_version": firmware_version,
