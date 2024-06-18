@@ -94,8 +94,11 @@ def main():
     |-- ais_client_demo.py
     |-- ais_server_demo.py
 |-- docs
+    |-- en
+        |-- API_Reference.md
+    |-- zh
+        |-- API参考手册.md
     |-- AIS-140 (2016).pdf
-    |-- VT140-Protocol_V1._20200104.pdf
 ```
 
 - `code` floder is incloud AIS client codes.
@@ -104,7 +107,7 @@ def main():
 - `demo` floder is incloud AIS client demo and AIS server demo.
   - `demo/ais_client_demo.py` is an AIS client demo base on QuecPython.
   - `demo/ais_server_demo.py` is an AIS server demo base on CPython.
-- `docs` floder is incloud AIS-140 protocal documents.
+- `docs` floder is incloud AIS-140 protocal documents and API reference.
 
 ## How To Use
 

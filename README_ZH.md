@@ -94,8 +94,11 @@ def main():
     |-- ais_client_demo.py
     |-- ais_server_demo.py
 |-- docs
+    |-- en
+        |-- API_Reference.md
+    |-- zh
+        |-- API参考手册.md
     |-- AIS-140 (2016).pdf
-    |-- VT140-Protocol_V1._20200104.pdf
 ```
 
 - `code` 该目录包含了 AIS 客户端代码。
@@ -104,7 +107,7 @@ def main():
 - `demo` 该目录包含了 AIS 客户端样例和 AIS 服务器样例.
   - `demo/ais_client_demo.py` 该文件是一个基于 QuecPython 的 AIS 客户端样例.
   - `demo/ais_server_demo.py` 该文件是一个基于 CPython 的 AIS 服务端样例.
-- `docs` 该目录包含了 AIS-140 协议相关文档.
+- `docs` 该目录包含了 AIS-140 协议相关文档和 API 参考手册.
 
 ## 如何使用
 
