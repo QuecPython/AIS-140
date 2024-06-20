@@ -343,7 +343,7 @@ res = ais_client.send_emergency(**meg_kwargs)
 |:---|:---|
 |bool|`True` - Success<br>`False` - Fail|
 
-## <span id="packettypes">Packet Type Enumeration Value<span>
+## <span id="packettypes">Packet Type Enumeration Value</span>
 
 ### PacketTypes
 
@@ -376,7 +376,7 @@ PacketTypes.EmergencyAlert
 |SOSEmergencyButtonWireDisconnect|`WD`|SOS Emergency Button Wire Disconnect|
 |OverspeedAlert|`OS`|Overspeed Alert|
 
-## <span id="alertid">Alarm Identification Enumeration Value<span>
+## <span id="alertid">Alarm Identification Enumeration Value</span>
 
 ### AlertID
 
