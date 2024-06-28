@@ -1,5 +1,7 @@
 # AIS-140
 
+[中文](./README_ZH.md) | English
+
 ## Introduction
 
 This is based on QuecPython.
@@ -25,7 +27,7 @@ def server_cmd(cmd, key, val):
 
     Args:
         cmd(str): SET/GET/CLR.
-        key(str): 
+        key(str):
             PIP - Primary Server IP
             PPT - Primary Server Port
             SIP - Secondary Server IP
@@ -64,8 +66,8 @@ def main():
 
     # Send Health Monitoring Packet
     hbt_kwargs = {...}
-    res = ais_client.send_heart_beat(**hbt_kwargs)
-    print("ais_client.send_heart_beat() %s" % res)
+    res = ais_client.send_health_monitoring(**hbt_kwargs)
+    print("ais_client.send_health_monitoring() %s" % res)
 
     # Send Location/Alert Information Packet
     lai_kwargs = {...}
@@ -92,8 +94,11 @@ def main():
     |-- ais_client_demo.py
     |-- ais_server_demo.py
 |-- docs
+    |-- en
+        |-- API_Reference.md
+    |-- zh
+        |-- API参考手册.md
     |-- AIS-140 (2016).pdf
-    |-- VT140-Protocol_V1._20200104.pdf
 ```
 
 - `code` floder is incloud AIS client codes.
@@ -102,7 +107,7 @@ def main():
 - `demo` floder is incloud AIS client demo and AIS server demo.
   - `demo/ais_client_demo.py` is an AIS client demo base on QuecPython.
   - `demo/ais_server_demo.py` is an AIS server demo base on CPython.
-- `docs` floder is incloud AIS-140 protocal documents.
+- `docs` floder is incloud AIS-140 protocal documents and API reference.
 
 ## How To Use
 
@@ -179,3 +184,27 @@ You can see log `ais_client.send_login() True.` in our QPYcom REPL, than the `Lo
 **Note:**
 
 > You can refer to `demo/ais_client_demo.py` to write client requests that conform to business logic.
+
+## Usage
+
+- [API Reference Manual](./docs/en/API_Reference.md)
+- [Client Example Code](./demo/ais_client_demo.py)
+- [Server Example Code](./demo/ais_server_demo.py)
+
+## Contribution
+
+We welcome contributions to improve this project! Please follow these steps to contribute:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/your-feature`).
+3. Commit your changes (`git commit -m 'Add your feature'`).
+4. Push to the branch (`git push origin feature/your-feature`).
+5. Open a Pull Request.
+
+## License
+
+This project is licensed under the Apache License. See the [LICENSE](./LICENSE) file for details.
+
+## Support
+
+If you have any questions or need support, please refer to the [QuecPython documentation](https://python.quectel.com/doc/en) or open an issue in this repository.
